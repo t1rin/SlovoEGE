@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from random import choice, shuffle
 
 from data import *
@@ -112,7 +114,7 @@ class App:
                     data = {"words": self.all_words,
                             "letters": self.all_similar_letters}
                     json_write("data.json", data)
-                    print(f"Слово '{answer.replace("_", "")}' добавлено")
+                    print(f"Слово '{answer.replace('_', '')}' добавлено")
                 answer = None
             else:
                 self.mode = 0
@@ -141,7 +143,7 @@ class App:
             if errors:
                 print("Ошибки в словах:")
                 for word, quentity in errors:
-                    print(f" {word.replace("_", "")} - {quentity}")
+                    print(f" {word.replace('_', '')} - {quentity}")
             print("Вводите '0', чтобы отправиться в 'Меню'")
             answer = input(">> ")
         else:
